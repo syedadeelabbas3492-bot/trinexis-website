@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trinexis Software House provides professional website development, e-commerce design and SEO services for businesses worldwide.">
+  <meta name="keywords" content="Trinexis, website development, web design, e-commerce, Shopify, WordPress, Wix, SEO">
+  <meta name="author" content="Trinexis Software House">
+  <meta name="theme-color" content="#07111f">
+  <title>Trinexis Software House | Websites That Grow Your Business</title>
+  <style>
+    :root{--bg:#07111f;--panel:#0d1b2d;--panel2:#10233a;--text:#f4f8ff;--muted:#a8b7ca;--cyan:#38d9f5;--blue:#5b8cff;--line:rgba(255,255,255,.1);--max:1160px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(circle at 80% 5%,rgba(56,217,245,.10),transparent 28%),var(--bg);color:var(--text);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(92%,var(--max));margin:auto}
+    header{position:sticky;top:0;z-index:50;background:rgba(7,17,31,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{font-size:1.35rem;font-weight:850;letter-spacing:.5px}.logo span{color:var(--cyan)}
+    .nav-links{display:flex;align-items:center;gap:27px;color:#d4deeb;font-size:.93rem}
+    .nav-links a:hover{color:var(--cyan)}
+    .menu-btn{display:none;background:none;border:1px solid var(--line);color:white;padding:8px 12px;border-radius:9px;font-size:1.2rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:10px;font-weight:750;background:linear-gradient(110deg,var(--cyan),#76a7ff);color:#061321;transition:.25s;border:0;cursor:pointer}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(56,217,245,.18)}
+    .btn-outline{background:transparent;color:var(--text);border:1px solid rgba(56,217,245,.5)}
+    .hero{padding:105px 0 88px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px}
+    .eyebrow{display:inline-block;color:var(--cyan);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.76rem;margin-bottom:18px}
+    h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.06;letter-spacing:-2.5px;margin-bottom:24px}
+    h1 span{background:linear-gradient(90deg,var(--cyan),#8aaaff);background-clip:text;color:transparent}
+    .hero p,.section-intro{color:var(--muted);font-size:1.08rem;max-width:650px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .hero-visual{min-height:380px;border:1px solid rgba(56,217,245,.23);border-radius:26px;background:linear-gradient(145deg,rgba(16,35,58,.95),rgba(8,19,33,.9));padding:28px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.25)}
+    .hero-visual:before,.hero-visual:after{content:"";position:absolute;border-radius:50%;filter:blur(2px)}
+    .hero-visual:before{width:240px;height:240px;background:rgba(56,217,245,.13);top:-100px;right:-65px}
+    .hero-visual:after{width:190px;height:190px;background:rgba(91,140,255,.15);bottom:-90px;left:-65px}
+    .screen{position:relative;z-index:1;width:100%;max-width:390px;border:1px solid rgba(255,255,255,.16);border-radius:16px;background:#091625;padding:18px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+    .screen-top{display:flex;gap:6px;margin-bottom:18px}.dot{width:8px;height:8px;border-radius:50%;background:#52657c}
+    .screen-banner{height:115px;border-radius:10px;background:linear-gradient(120deg,#123b52,#226b80 55%,#627dca);margin-bottom:15px}
+    .screen-line{height:9px;border-radius:9px;background:#263d55;margin:10px 0;width:85%}.screen-line.short{width:52%}
+    .screen-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}.screen-cards i{height:58px;border-radius:8px;background:#142c43;border:1px solid rgba(56,217,245,.15)}
+    section{padding:82px 0}.section-head{text-align:center;margin:0 auto 42px;max-width:720px}
+    h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;letter-spacing:-1px;margin-bottom:14px}
+    .section-intro{margin:auto}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(150deg,rgba(16,35,58,.92),rgba(10,24,40,.96));border:1px solid var(--line);border-radius:17px;padding:25px;transition:.25s}
+    .card:hover{transform:translateY(-5px);border-color:rgba(56,217,245,.42)}
+    .icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(56,217,245,.12);color:var(--cyan);font-size:1.35rem;margin-bottom:18px}
+    h3{font-size:1.16rem;margin-bottom:9px}.card p{color:var(--muted);font-size:.94rem}
+    .price{font-size:1.8rem;font-weight:850;color:var(--cyan);margin:14px 0 4px}.price small{font-size:.78rem;color:var(--muted);font-weight:500}
+    .features{list-style:none;margin:15px 0 0;color:#c3d0df;font-size:.9rem}.features li{margin:7px 0}.features li:before{content:"✓";color:var(--cyan);margin-right:9px;font-weight:900}
+    .note{margin-top:24px;padding:17px 20px;border:1px solid rgba(56,217,245,.25);border-radius:12px;background:rgba(56,217,245,.06);color:#c6d7e8;font-size:.92rem}
+    .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+    .about-panel{padding:30px;border-radius:20px;background:linear-gradient(145deg,#102941,#0b1a2b);border:1px solid var(--line)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+    .stat{padding:17px;background:rgba(255,255,255,.035);border-radius:12px}.stat strong{display:block;color:var(--cyan);font-size:1.35rem}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:22px;border-top:2px solid var(--cyan);background:rgba(255,255,255,.035);border-radius:0 0 13px 13px}.step b{color:var(--cyan);font-size:.8rem;letter-spacing:1px}
+    .cta{padding:55px 35px;border-radius:22px;text-align:center;background:linear-gradient(115deg,rgba(20,65,87,.9),rgba(28,49,92,.9));border:1px solid rgba(56,217,245,.25)}
+    .cta p{color:#d1deed;margin:12px auto 24px;max-width:620px}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}
+    .contact-item{padding:16px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+    .contact-item strong{display:block;color:white;margin-bottom:3px}
+    form{display:grid;gap:13px}
+    input,textarea{width:100%;padding:14px 15px;border-radius:10px;border:1px solid var(--line);background:#081625;color:white;font:inherit;outline:none}
+    input:focus,textarea:focus{border-color:var(--cyan)}textarea{min-height:130px;resize:vertical}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.88rem}
+    .footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:75px}.hero-visual{min-height:300px}.grid{grid-template-columns:repeat(2,1fr)}.about-wrap,.contact-grid{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:620px){nav{height:68px}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#091625;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.nav-links .btn{width:100%}.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.hero{padding:65px 0}.hero-visual{min-height:260px;padding:18px}section{padding:65px 0}h1{letter-spacing:-1.5px}.cta{padding:38px 20px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#home">TRINEXIS<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a class="btn" href="#contact">Get a Quote</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container hero" id="home">
+    <div class="reveal">
+      <span class="eyebrow">Digital solutions for modern businesses</span>
+      <h1>Build your online presence. <span>Grow with confidence.</span></h1>
+      <p>Trinexis Software House creates professional websites, e-commerce experiences and SEO solutions that help businesses look credible, reach more customers and grow online.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Start Your Project</a>
+        <a class="btn btn-outline" href="#services">Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal" aria-label="Website design illustration">
+      <div class="screen"><div class="screen-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div><div class="screen-banner"></div><div class="screen-line"></div><div class="screen-line short"></div><div class="screen-cards"><i></i><i></i><i></i></div></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">What we do</span><h2>Services built around your business</h2><p class="section-intro">From your first business website to a complete online store, get the digital support you need in one place.</p></div>
+      <div class="grid">
+        <article class="card reveal"><div class="icon">✦</div><h3>Website Development</h3><p>Modern, responsive business websites designed to present your brand professionally and turn visitors into enquiries.</p></article>
+        <article class="card reveal"><div class="icon">▣</div><h3>E-commerce Development</h3><p>Easy-to-use online stores with product pages and a smooth shopping experience for your customers.</p></article>
+        <article class="card reveal"><div class="icon">⌘</div><h3>Shopify Store Design</h3><p>Clean Shopify storefront design tailored to your products, brand identity and customer journey.</p></article>
+        <article class="card reveal"><div class="icon">◎</div><h3>Website SEO</h3><p>On-page and off-page SEO services designed to improve your website's search visibility over time.</p></article>
+        <article class="card reveal"><div class="icon">↗</div><h3>E-commerce SEO</h3><p>Search optimization for online stores, helping product and category pages become easier to discover.</p></article>
+        <article class="card reveal"><div class="icon">＋</div><h3>WordPress & WIX</h3><p>Professional website builds on WordPress and WIX, with pricing aligned to the packages below.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Clear packages</span><h2>Website development pricing</h2><p class="section-intro">Straightforward starting packages. Share your requirements to confirm the final scope and quotation.</p></div>
+      <div class="grid">
+        <article class="card reveal"><h3>Landing Page</h3><div class="price">$200 <small>/ one-time</small></div><p>A focused single-page website for a service, product or campaign.</p><ul class="features"><li>Responsive design</li><li>Basic speed optimization</li><li>SEO-friendly structure</li></ul></article>
+        <article class="card reveal"><h3>5-Page Website</h3><div class="price">$400 <small>/ one-time</small></div><p>A professional website for businesses that need essential pages.</p><ul class="features"><li>Up to 5 pages</li><li>Cross-browser compatibility</li><li>Support during delivery</li></ul></article>
+        <article class="card reveal"><h3>10-Page Website</h3><div class="price">$550 <small>/ one-time</small></div><p>More room to explain your services, team and business offering.</p><ul class="features"><li>Up to 10 pages</li><li>Responsive layout</li><li>SEO-friendly structure</li></ul></article>
+        <article class="card reveal"><h3>E-commerce — 20 Products</h3><div class="price">$400 <small>/ one-time</small></div><p>Launch an online shop with a catalogue of up to 20 products.</p><ul class="features"><li>Up to 20 products</li><li>Mobile-friendly store</li><li>Basic speed optimization</li></ul></article>
+        <article class="card reveal"><h3>E-commerce — 50 Products</h3><div class="price">$500 <small>/ one-time</small></div><p>More product capacity for a growing online business.</p><ul class="features"><li>Up to 50 products</li><li>Responsive design</li><li>Cross-browser compatibility</li></ul></article>
+        <article class="card reveal"><h3>Shopify Store Design</h3><div class="price">$600 <small>/ one-time</small></div><p>A branded Shopify storefront designed for a polished shopping experience.</p><ul class="features"><li>Shopify store design</li><li>Mobile-friendly experience</li><li>Support during delivery</li></ul></article>
+      </div>
+      <div class="note reveal"><strong>Included with website packages:</strong> responsive design, basic speed optimization, SEO-friendly structure, cross-browser compatibility and support during delivery. WordPress and WIX projects follow the same listed pricing, subject to scope confirmation.</div>
+      <div class="grid" style="margin-top:20px">
+        <article class="card reveal"><h3>Website SEO</h3><div class="price">$300 <small>/ month</small></div><p>For 5–7 page websites, including on-page and off-page SEO.</p></article>
+        <article class="card reveal"><h3>E-commerce SEO</h3><div class="price">$300 <small>/ month</small></div><p>SEO support focused on online stores and product discovery.</p></article>
+        <article class="card reveal"><h3>SEO Commitment</h3><div class="price">6 <small>months minimum</small></div><p>SEO services require a minimum commitment of six months.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about-wrap">
+      <div class="reveal"><span class="eyebrow">About Trinexis</span><h2>Practical technology. Professional execution.</h2><p class="section-intro" style="margin:0">We help businesses establish and improve their digital presence through thoughtful design, dependable development and focused search optimization. Our aim is to make technology useful, accessible and aligned with your business goals.</p></div>
+      <div class="about-panel reveal"><h3>Our commitment</h3><p style="color:var(--muted)">Every project starts with understanding what you need. We keep communication clear, focus on responsive experiences and work toward a result that supports your business.</p><div class="stats"><div class="stat"><strong>Responsive</strong><span>Across screen sizes</span></div><div class="stat"><strong>Modern</strong><span>Clean design approach</span></div><div class="stat"><strong>SEO-ready</strong><span>Structured foundations</span></div><div class="stat"><strong>Support</strong><span>During delivery</span></div></div></div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container"><div class="section-head reveal"><span class="eyebrow">How we work</span><h2>A simple process from idea to launch</h2></div>
+      <div class="steps">
+        <div class="step reveal"><b>01 / DISCOVER</b><h3>Discuss</h3><p>We learn about your business, goals and project requirements.</p></div>
+        <div class="step reveal"><b>02 / PLAN</b><h3>Plan</h3><p>We agree on the scope, pages, features and delivery expectations.</p></div>
+        <div class="step reveal"><b>03 / BUILD</b><h3>Develop</h3><p>We design and build your website around the agreed requirements.</p></div>
+        <div class="step reveal"><b>04 / DELIVER</b><h3>Launch</h3><p>We review the result with you and support you during delivery.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section><div class="container"><div class="cta reveal"><span class="eyebrow">Have a project in mind?</span><h2>Let's build something valuable.</h2><p>Tell us what you are planning. We'll discuss your requirements and help you choose a suitable solution.</p><a class="btn" href="#contact">Contact Trinexis</a></div></div></section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Get in touch</span><h2>Let's talk about your project</h2><p class="section-intro">Reach out by WhatsApp or email, or send a message using the form.</p></div>
+      <div class="contact-grid">
+        <div class="card reveal">
+          <h3>Contact details</h3>
+          <div class="contact-item"><strong>WhatsApp / Phone</strong><a href="https://wa.me/923417845089" target="_blank" rel="noopener">+92 341 7845089</a></div>
+          <div class="contact-item"><strong>Email</strong><a href="mailto:infotrinexes05@gmail.com">infotrinexes05@gmail.com</a></div>
+          <div class="contact-item"><strong>Location</strong>Las Vegas, Nevada, USA</div>
+          <div class="contact-item"><strong>Website</strong>Domain can be connected when purchased</div>
+        </div>
+        <div class="card reveal">
+          <form id="contactForm">
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+            <input id="email" name="email" type="email" placeholder="Your email address" required>
+            <input id="subject" name="subject" type="text" placeholder="Project or service">
+            <textarea id="message" name="message" placeholder="Tell us a little about your project..." required></textarea>
+            <button class="btn" type="submit">Send Message via Email</button>
+            <p style="font-size:.8rem;color:var(--muted)">This form opens your email app with your message ready to send.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="container footer-row"><span>© <span id="year"></span> Trinexis Software House. All rights reserved.</span><span>Designed for business growth.</span></div></footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    menuBtn.textContent = isOpen ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.textContent = '☰';
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim() || 'Website project enquiry';
+    const message = document.getElementById('message').value.trim();
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    window.location.href = `mailto:infotrinexes05@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+</script>
+</body>
+</html>
